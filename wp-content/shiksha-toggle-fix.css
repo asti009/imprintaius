@@ -1,0 +1,46 @@
+/**
+ * Shiksha Toggle/Accordion Fix CSS
+ * Ensures proper toggle behavior on static pages
+ */
+
+/* Hide toggle content by default */
+.elementor-toggle .elementor-tab-content {
+    display: none;
+}
+
+/* Show toggle content when active */
+.elementor-toggle .elementor-toggle-item.elementor-active .elementor-tab-content,
+.elementor-toggle .elementor-tab-content.elementor-active {
+    display: block !important;
+}
+
+/* Toggle title - make it clickable */
+.elementor-toggle .elementor-tab-title {
+    cursor: pointer;
+}
+
+/* Icon states */
+.elementor-toggle .elementor-toggle-icon-opened {
+    display: none;
+}
+
+.elementor-toggle .elementor-toggle-icon-closed {
+    display: inline-flex;
+}
+
+/* When active, swap icons */
+.elementor-toggle .elementor-toggle-item.elementor-active .elementor-toggle-icon-opened,
+.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened {
+    display: inline-flex !important;
+}
+
+.elementor-toggle .elementor-toggle-item.elementor-active .elementor-toggle-icon-closed,
+.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed {
+    display: none !important;
+}
+
+/* Smooth transition for content */
+.elementor-toggle .elementor-tab-content {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
